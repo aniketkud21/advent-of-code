@@ -15,7 +15,7 @@ def logic(start_pos, count, input):
         return count
     
     rotation = input[0]
-    new_pos = rotate(start_pos, rotation)
+    new_pos = utils.rotate(start_pos, rotation)
     
     if new_pos == 0:
         count = count + 1
