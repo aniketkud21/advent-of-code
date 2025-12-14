@@ -1,3 +1,9 @@
 __pycache__
 /day_*/input.txt
 **/input.txt
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
