@@ -1,14 +1,4 @@
-import input
-import sys
-
-def rotate(current_pos, rotation):
-    direction = rotation[0]
-    distance = int(rotation[1:])
-    
-    if direction == "L":
-        return (current_pos + 100 - distance) % 100
-    else:
-        return (current_pos + distance) % 100  
+import input, utils
     
 def logic(start_pos, count, input):
     """
@@ -33,23 +23,20 @@ def logic(start_pos, count, input):
     return logic(new_pos, count, input[1:])
     
 if __name__ == "__main__":
-    input = input.parse_input("input.txt")
+    # todo: Make this dynamic based on from where i am executing the program
+    input = input.parse_input("day_1/input.txt")
     
     # defined in problem
     current_pos = 50
     count = 0
     
     for rotation in input:
-        current_pos = rotate(current_pos, rotation)
+        direction = rotation[0]
+        distance = int(rotation[1:])
+        
+        current_pos = utils.rotate(current_pos, direction, distance)
         
         if current_pos == 0:
             count += 1
             
     print(count)
-
-    # print(logic(start_pos, count, input))
-    
-    
-    
-    
-    
