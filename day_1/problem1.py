@@ -11,6 +11,16 @@ def rotate(current_pos, rotation):
         return (current_pos + distance) % 100  
     
 def logic(start_pos, count, input):
+    """
+    Recursive solution to compute the password.
+
+    Note:
+        For this solution need to increase recursion limit
+        
+        Default recursion limit is 1000
+        sys.getrecursionlimit()
+        1000
+    """
     if len(input) == 0:
         return count
     
