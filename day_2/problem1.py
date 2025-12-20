@@ -18,12 +18,12 @@ def sum_invalid_ids(min, max):
     sum = 0
 
     for i in range(min, max + 1):
-        if is_digits_duplicate(i):
+        if are_digits_duplicate(i):
             sum += i
               
     return sum
 
-def is_digits_duplicate(number):
+def are_digits_duplicate(number):
     """
     Checks if a number has an even number of digits and the first half of the digits equals the second half.
 
@@ -34,9 +34,9 @@ def is_digits_duplicate(number):
         bool: True if the condition is met, False otherwise.
         
     Example:
-        is_digits_duplicate(1212) -> True
-        is_digits_duplicate(1234) -> False
-        is_digits_duplicate(121) -> False (odd number of digits)
+        are_digits_duplicate(1212) -> True
+        are_digits_duplicate(1234) -> False
+        are_digits_duplicate(121) -> False (odd number of digits)
     """
     no_of_digits = len(str(number))
 
